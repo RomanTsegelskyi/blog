@@ -32,3 +32,9 @@ email:             romantsegelskyi@gmail.com
 
 # Custom vars
 version:             1.0.0
+
+## This is the list of pages to include in the header of the website.
+pages_list:       
+  About: '/about/'
+  Feed: '/atom.xml' 
+
