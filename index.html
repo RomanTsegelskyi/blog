@@ -5,17 +5,21 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <article class="post">
+  <div class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
         {{ post.title }}
       </a>
     </h1>
 
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+  <span class="post-date">
+    Posted on <a href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: "%B %-d, %Y" }}</a>
+  </span>
+    {{ post.excerpt }}
+    <a href="{{ site.baseurl }}{{ post.url }}"><small>Read More &rarr;</small></a>
 
-    {{ post.content }}
-  </article>
+  </div>
+  <hr />
   {% endfor %}
 </div>
 

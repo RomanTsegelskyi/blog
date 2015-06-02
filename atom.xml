@@ -1,5 +1,6 @@
 ---
 layout: null
+Title: Atom Feed
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -21,7 +22,10 @@ layout: null
    <link href="{{ site.url }}/{{ site.baseurl }}/{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>{{ site.url }}{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">{{ post.excerpt | xml_escape }}</content>
+   <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+   <link>{{ site.url }}{{ base.url }}{{ post.url }}</link>
+   <guid isPermaLink="true">{{ site.url }}{{ base.url }}{{ post.url }}</guid>
  </entry>
  {% endfor %}
 
