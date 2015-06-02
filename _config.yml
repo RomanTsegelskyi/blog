@@ -1,17 +1,6 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-#
-#
-
 markdown:            kramdown
-highlighter:         pygments
 
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: true
 
 # Setup
 title:               Programming Inverstigations
@@ -35,6 +24,6 @@ version:             1.0.0
 
 ## This is the list of pages to include in the header of the website.
 pages_list:       
-  About: '/about/'
+  About: '/about'
   Feed: '/atom.xml' 
 
