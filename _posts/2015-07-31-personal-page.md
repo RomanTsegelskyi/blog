@@ -73,6 +73,14 @@ exclude:             ['posts']
 Push the changes to your repository and you will be able to see the blog under `%USERNAME%.github.io/blog_name`
 ### Comments
 
+One of the main things that I was concerned about when creating static blog is having comments functionality. But [Disquis](https://disqus.com/) seems to solve that problem very well. Create a file `_includes/comments.html` which includes the code provided by Disqus after registration. After that add modify the file `_layouts/default.html` to include the line:
+
+```
+{% include comments.html %}
+```
+
+Setting the comments this way allows easy enabling/disabling of comments on a page-by-page basis. All you need have to do is set `comments: True` in the YAML header of the post.
+
 ### Analytics
 
 ### Social Buttons
