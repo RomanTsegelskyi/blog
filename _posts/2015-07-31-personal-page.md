@@ -71,6 +71,7 @@ exclude:             ['posts']
 ```
 
 Push the changes to your repository and you will be able to see the blog under `%USERNAME%.github.io/blog_name`
+
 ### Comments
 
 One of the main things that I was concerned about when creating static blog is having comments functionality. But [Disquis](https://disqus.com/) seems to solve that problem very well. Create a file `_includes/comments.html` which includes the code provided by Disqus after registration. After that add modify the file `_layouts/default.html` to include the line:
@@ -82,6 +83,12 @@ One of the main things that I was concerned about when creating static blog is h
 Setting the comments this way allows easy enabling/disabling of comments on a page-by-page basis. All you need have to do is set `comments: True` in the YAML header of the post.
 
 ### Analytics
+
+Adding Google Analytics to the blog is similar to adding comments. First, create another acooung through Google Analytics Admin section as you did for peronal page. Google will give you the javascript tracking code to embed on every website, which you should put in `_includes/google_analytics.html`. Finally, to enable analytics on all of the pages of the blog add the include to `_layouts/default.html`:
+
+```
+{% include google_analytics.html %}
+```
 
 ### Social Buttons
 
