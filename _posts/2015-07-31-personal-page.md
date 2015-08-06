@@ -81,16 +81,65 @@ One of the main things that I was concerned about when creating static blog is h
 ```
 
 Setting the comments this way allows easy enabling/disabling of comments on a page-by-page basis. All you need have to do is set `comments: True` in the YAML header of the post.
-
+---
+layout: post
+title: Creating page and blog with gh-pges(Test)
+comments: True
+share: True
+---
 ### Analytics
 
-Adding Google Analytics to the blog is similar to adding comments. First, create another acooung through Google Analytics Admin section as you did for peronal page. Google will give you the javascript tracking code to embed on every website, which you should put in `_includes/google_analytics.html`. Finally, to enable analytics on all of the pages of the blog add the include to `_layouts/default.html`:
+Adding Google Analytics to the blog is similar to adding comments. First, create another account through Google Analytics Admin section as you did for peronal page. Google will give you the javascript tracking code to embed on every website, which you should put in `_includes/google_analytics.html`. Finally, to enable analytics on all of the pages of the blog add the include to `_layouts/default.html`:
 
 ```
 {% include google_analytics.html %}
 ```
 
 ### Social Buttons
+
+There are different options for ways to adding sharing buttons to you blog (for example [this](https://github.com/carrot/share-button) and [this](https://github.com/lipis/bootstrap-social)), but after some searching, I went for simplicity described in this [article](http://codingtips.kanishkkunal.in/share-buttons-jekyll/) on [CodingTips blog](http://codingtips.kanishkkunal.in/). I would encourage reading an original article, but I also wanted to provide here the summary.
+
+As in other steps, create `_includes/share.html` with following contents:
+
+```html
+<div class="share-page">
+    Share this on &rarr;
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
+    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a>
+    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a>
+</div>
+```
+
+Next add this to `css/style.css`:
+
+```css
+.share-page {
+    text-align: center;
+    background: $secondary-color;
+    color: $light-color;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin: 1.5 * $spacing-unit 0;
+
+    a {
+        font-weight: 700;
+        color: #fff;
+        margin-left: 10px;
+
+        &:hover {
+            border-bottom: 1px dashed #fff;
+        }
+    }
+}
+```
+
+Finally, to enable sharing on all of the pages of the blog add the include to `_layouts/default.html`:
+
+```
+{% include share.html %}
+```
+
+Also keep in mind that same as for comments, sharing can be turned off by setting `comments: False` in the YAML header of the post.
 
 ### Interesting deployment systems
 
