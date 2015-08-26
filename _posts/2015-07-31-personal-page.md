@@ -1,9 +1,12 @@
-Creating a personal webpage and a blog using github pages and jekyll
-===
+---
+layout: post
+title: Creating a personal webpage and a blog using Github pages and jekyll
+comments: True
+---
 
 Having a personal webpage and blog can be very beneficial for a developer. I recently decided to create my own page and a blog and felt that some guide with the problem I faced and how I solved them would be useful. This guide is meant to help people that are familiar with what Git and Github is to get up and running with GitHub Pages and Jekyll in an just couple of hours.
 
-How to create a personal page using GitHub pages
+Creating a personal page using GitHub pages
 ---
 
 [GitHub Pages](https://pages.github.com/) are public webpages hosted for free through [GitHub](https://github.com) Users are allowed to have one personal page and unlimited amount of pages for different projects.
@@ -17,8 +20,7 @@ Since there are many articles online about creating GitHub Pages, I will only wr
 5. If needed setup `ssh` keys as described [here](https://help.github.com/articles/generating-ssh-keys/).
 6. Add remote repository to your local repository by `git add remote REMOTE_URL`. More detailed steps are can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
 
-Templates for the website
----
+### Templates for the website
 
 Creating a basic website might be quick and easy, but who needs a site with just a couple of words? Assuming you don't know HTML that well, or don't want to spend a lot of time creating a pretty website a good option is to use one of countless templates and customize it for yourself.
 
@@ -28,12 +30,11 @@ Here are some good websites to get started with:
 * [WIX](http://www.wix.com/website/templates/html/personal/1)
 * [FreeWebTemplates](http://www.freewebtemplates.com/personal/)
 
-Google Analytics
----
+### Google Analytics
 
 In case you love statistics or just curious if anyone visit you website, adding something to track visitor seems like a good idea. My choice was [Google Analytics](http://www.google.com/analytics/) since it's relative simple and works great. To add analytics support go to Admin tab and create new account. After you enter all the needed information and accept the agreements, you will get tracking code, something like this:
 
-```
+``` javascript
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -45,7 +46,7 @@ In case you love statistics or just curious if anyone visit you website, adding 
 
 Insert this code anywhere at your index.html page and data will get automatically uploaded to analytics.
 
-How to create a blog as a subdirectory of a personal page
+Linking a blog to the personal page
 ---
 
 Recently I learned about [Jekyll](http://jekyllrb.com/) - static websites generator and for me it seemed like a great and simpler alternative to dynamic platform like Wordpress, Joomla, etc. Besides its simplicity, it makes backups so much easier and avoids most common security concerns caused by running dynamic websites. Jekyll allows to write posts in [Markdown](https://en.wikipedia.org/wiki/Markdown) which is another big plus. Moreover, code examples are very nicely embedded in the website. So combining with a fact that GitHub provides free hosting for Jekyll blogs, I was completely sold for it.
@@ -61,7 +62,7 @@ Even though setting up Jekyll is relatively easy, there exists a really nice rep
 
 After you clone the poole repository, it's time to link it to your page. For that just edit `_config.yml`:
 
-```
+``` YAML
 # Setup
 title:               Your Blog Titme
 tagline:             ''
@@ -80,7 +81,7 @@ Push the changes to your repository and you will be able to see the blog under `
 
 One of the main things that I was concerned about when creating static blog is having comments functionality. But [Disquis](https://disqus.com/) seems to solve that problem very well. Create a file `_includes/comments.html` which includes the code provided by Disqus after registration. After that add modify the file `_layouts/default.html` to include the line:
 
-```
+``` html
 {% include comments.html %}
 ```
 
@@ -90,7 +91,7 @@ Setting the comments this way allows easy enabling/disabling of comments on a pa
 
 Adding Google Analytics to the blog is similar to adding comments. First, create another account through Google Analytics Admin section as you did for peronal page. Google will give you the javascript tracking code to embed on every website, which you should put in `_includes/google_analytics.html`. Finally, to enable analytics on all of the pages of the blog add the include to `_layouts/default.html`:
 
-```
+``` html
 {% include google_analytics.html %}
 ```
 
@@ -100,7 +101,7 @@ There are different options for ways to adding sharing buttons to you blog (for 
 
 As in other steps, create `_includes/share.html` with following contents:
 
-```html
+``` html
 <div class="share-page">
     Share this on &rarr;
     <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a>
@@ -111,7 +112,7 @@ As in other steps, create `_includes/share.html` with following contents:
 
 Next add this to `css/_share.scss`:
 
-```css
+``` css
 .share-page {
     text-align: center;
     background: $secondary-color;
@@ -134,14 +135,14 @@ Next add this to `css/_share.scss`:
 
 And and import in `styles.scss`:
 
-```css
+``` css
 @import "share";
 ```
 
 Finally, to enable sharing on all of the pages of the blog add the include to `_layouts/default.html`:
 
-```
-{% include share.html %}
+``` html
+{% include social.html %}
 ```
 
 Also keep in mind that same as for comments, sharing can be turned off by setting `comments: False` in the YAML header of the post.

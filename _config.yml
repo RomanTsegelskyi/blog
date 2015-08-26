@@ -1,4 +1,6 @@
-markdown:            kramdown
+markdown:           redcarpet
+redcarpet:
+      extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 permalink:           pretty
 
@@ -8,7 +10,7 @@ tagline:             ''
 description:         ''
 home:                http://romantsegelskyi.github.io
 url:                 http://romantsegelskyi.github.io/pi-blog
-baseurl:             /pi-blog
+baseurl:             /pi-blog/
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']
@@ -24,6 +26,5 @@ version:             1.0.0
 
 ## This is the list of pages to include in the header of the website.
 pages_list:       
-  About: '/about'
-  Feed: '/atom.xml' 
-
+  About: '/pi-blog/about'
+  Atom: '/pi-blog/atom.xml'
