@@ -56,7 +56,7 @@ Recently I learned about [Jekyll](http://jekyllrb.com/) - static websites genera
 
 Even though setting up Jekyll is relatively easy, there exists a really nice bundle repository - [Poole](https://github.com/poole/poole) to simplify the process even more. `Poole` calls itself "the butler for Jekyll" and it indeed reduces the time needed to setup Jekyll powered blog to the matter of minutes. Of course the default design is no unique, but it allows to have a very quick start.
 
-![demo.png](https://camo.githubusercontent.com/913caa38048fb4c6ed8767ab206f02b3fbc10f40/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f39383638312f313833313232382f34326166366336612d373338342d313165332d393866622d6530623932336565303436382e706e67).
+![demo.png](https://camo.githubusercontent.com/b5a8b55693e7f4d61749f1e103746843c7cb8105/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f39383638312f313833343335392f37316165343034382d373364622d313165332d396133632d6466333865623137303533372e706e67).
 
 Simple steps to get started:
 
