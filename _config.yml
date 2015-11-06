@@ -29,3 +29,5 @@ pages_list:
   About: '/pi-blog/about'
   Atom: '/pi-blog/atom.xml'
   RSS: '/pi-blog/rss.xml'
+
+gems: [jekyll-paginate]
