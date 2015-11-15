@@ -7,11 +7,11 @@ keywords: R, packages, practices, development, rstats, roman, Roman, Tsegelskyi,
 comments: True
 ---
 
-Recently I have finished working on my first R package - [yummlyr](https://github.com/RomanTsegelskyi/yummlyr), and decided a short article on best practices for creating R packages that I have encountered. There are many different manuals that can be found over the internet, with great [R packages](http://r-pkgs.had.co.nz/) book by [Hadley Wickham](http://had.co.nz/) for in depth study of the topic, while this post aims to give a short overview of best practices and tools for creating packages, drawing some inspiration from similar [post](https://pascalhertleif.de/artikel/good-practices-for-writing-rust-libraries/) for [Rust](http://rust-lang.org). 
+Recently I have finished working on my first R package - [yummlyr](https://github.com/RomanTsegelskyi/yummlyr), and decided to write a short post on best practices for creating R packages that I have encountered. There are many different manuals on creating R packages that can be found over the internet, with great [R packages](http://r-pkgs.had.co.nz/) book by [Hadley Wickham](http://had.co.nz/) for in depth study of the topic, while this post aims to give a short overview of best practices and tools for writing R packages, drawing some inspiration from similar [post](https://pascalhertleif.de/artikel/good-practices-for-writing-rust-libraries/) for [Rust](http://rust-lang.org). 
 
 ### What is an R package?
 
-R packages was one of the most fundamental things of the language. Essentially, it's a well defined format for distributing R code through CRAN. It took it's idea from [CPAN](http://www.cpan.org/) for Perl and now holds over 7000 packages. 
+R packages was one of the most fundamental things of the language. Essentially, it's a well defined format for distributing R code typically through [CRAN](https://cran.r-project.org/) and [Bioconductor](https://www.bioconductor.org/). CRAN took it's idea from [CPAN](http://www.cpan.org/) for Perl and now holds over 7000 packages. 
 
 ### Best Practices 
 
