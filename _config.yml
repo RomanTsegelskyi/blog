@@ -5,12 +5,12 @@ redcarpet:
 permalink:           pretty
 
 # Setup
-title:               Programming Inverstigations
+title:               Programming Investigations
 tagline:             ''
-description:         Personal Inverstigations just about anything connected with Computer Science
+description:         Personal Investigations just about anything connected to Programming and Software Engineering
 home:                http://romantsegelskyi.github.io
 url:                 http://romantsegelskyi.github.io/pi-blog
-baseurl:             /pi-blog/
+baseurl:             /pi-blog
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']

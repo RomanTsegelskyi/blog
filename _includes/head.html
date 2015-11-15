@@ -12,6 +12,15 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+ {% if page.desc %}
+ <meta name="description" content="{{ page.desc }}" />
+ {% endif %}
+ 
+ {% if page.keywords %}
+ <meta name="keywords" content="{{ page.keywords }}" />
+ {% else %}
+ <meta name="keywords" content="freelance, development, developer, sass, back-end developer, Roman Tsegelskyi, romantsegelskyi, rstats, rustlang, golang" />
+ {% endif %}
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
