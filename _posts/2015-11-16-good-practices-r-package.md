@@ -1,6 +1,5 @@
 ---
 layout: post
-permalink: /:year/:month/:day/:title/
 title: Good Practices for Writing R Packages
 desc: List of good practices that are used to create and maintain R packages
 keywords: R, packages, practices, development, rstats, roman, Roman, Tsegelskyi, romantsegelskyi
