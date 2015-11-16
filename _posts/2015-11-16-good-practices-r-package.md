@@ -81,7 +81,7 @@ to inspect line by line code coverage inside shiny app.
 Also `covr` is supported by [coveralls.io](https://coveralls.io) and [codecov.io](https://codecov.io) with allows a nice integration of code coverage into reporting into CI pipeline. In essence, to measure coverage with CI, you will only need to add `covr::coveralls` as part of your CI build. Just call,
 
 ```
-devtools::use_coveralls()
+devtools::use_coverage(type='coveralls')
 ```
 
 which will do the job of updating `.travis.yml`. Replace `coveralls` with `codecov` if you want to use it instead.
