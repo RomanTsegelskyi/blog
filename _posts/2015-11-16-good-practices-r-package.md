@@ -19,7 +19,7 @@ R packages was one of the most fundamental things of the language. Essentially, 
 Hadley Wickham wrote an amazing [devtools](https://github.com/hadley/devtools) package, which simplifies all the process around development with R. 
 For example, creating a package is as easy as calling 
 
-```
+```r
 devtools::create()
 ```
 
@@ -177,5 +177,4 @@ For more information and great [demos](http://yihui.name/knitr/demos/) refer to 
 
 ### P.S.
 
-Thanks for reading this post. I hope it was useful and practices listed here will simplify creating R package for you.
-
+Thanks for reading this post. I hope it was useful and practices listed here will simplify creating R package for you. If you have any comments/suggestions, please reach out to me in [twitter](https://twitter.com/romantsegelskyi), this [reddit thread](https://www.reddit.com/r/rstats/comments/3t2bni/good_practices_for_writing_r_packages/) or this [HackerNews thread](https://news.ycombinator.com/item?id=10576942). 
