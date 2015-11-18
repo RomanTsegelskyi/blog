@@ -47,6 +47,10 @@ devtools::use_testthat()
 
 A test file lives in `tests/testthat/`. Its name must start with test. Good example of using `testthat` for testing is [devtools test suite](https://github.com/hadley/devtools/tree/master/tests/testthat). More detailed information can be found on `testthat` [here](http://r-pkgs.had.co.nz/tests.html).
 
+#### Put the package on GitHub with useful README.md
+
+Putting the package on GitHub will allow the user of your package to get the development version with `devtools`, thus enabling you to deliver bug fixes/new features faster than going through formal process of submitting a package to CRAN/Bitbucket. Additionally I find it much easier to manage bug reports though GitHub issues. Also consider creating a detailed `README.md`, which in a lot of cases will serve the first introduction to your package. More and more now I find myself just going to the GitHub page of the package to find out how it works. And judging from [these comments](https://www.reddit.com/r/rstats/comments/3t2bni/good_practices_for_writing_r_packages/) it is a general trend in R community. 
+
 #### Use Travis and AppVeyor for Continious Integration
 
 During last year, I have seen a significant improvement of CI systems supporting R. Even though most of the tools are written by community, they are robust and make it relatively easy to setup. There are 2 systems, which I have seen primarily used in many packages (which are free for open source projects):
