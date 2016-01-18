@@ -5,12 +5,12 @@ redcarpet:
 permalink:           pretty
 
 # Setup
-title:               Programming Investigations
+title:               Roman Tsegelskyi's blog
 tagline:             ''
-description:         Personal Investigations just about anything connected to Programming and Software Engineering
+description:         Roman Tsegelskyi's blog about different things related to software engineering
 home:                http://romantsegelskyi.github.io
-url:                 http://romantsegelskyi.github.io/pi-blog
-baseurl:             /pi-blog
+url:                 http://romantsegelskyi.github.io/blog
+baseurl:             /blog
 paginate:            5
 paginate_path:       "/page:num/"
 exclude:             ['posts']
@@ -26,8 +26,8 @@ version:             1.0.0
 
 ## This is the list of pages to include in the header of the website.
 pages_list:       
-  About: '/pi-blog/about'
-  Atom: '/pi-blog/atom.xml'
-  RSS: '/pi-blog/rss.xml'
+  About: '/blog/about'
+  Atom: '/blog/atom.xml'
+  RSS: '/blog/rss.xml'
 
 gems: [jekyll-paginate]
